@@ -1,0 +1,77 @@
+BEFORE YOU PUBLISH THIS ON GITHUB / GITEE
+=========================================
+
+Two DIFFERENT things, two different rules:
+
+  (A) MiniPack itself   = MiniPack.java + START.bat + README.txt
+      -> YES, open source it. Clean and no third-party code inside.
+  (B) The built app     = the folder you send to the Win7 PC
+      -> NOT automatically. It embeds Electron 22 + Chromium + your web files.
+
+---- 5-minute checklist ----
+
+1. LICENSE (added in this zip): replace "<YOUR NAME OR GITHUB ID>" with
+   your name or GitHub ID. MIT requires the copyright notice and the
+   permission text to travel with every copy, so do NOT delete LICENSE.
+
+2. .gitignore (added): do not commit MiniPack.class, run.log,
+   compile.log, or the whole output folder. Do not push the ~200MB
+   Electron binary into the git repo -- put built files in "Releases"
+   instead, keep the repo source-only.
+
+3. Neutral defaults: MiniPack.java has two hard-coded sample strings
+   "Windows 12 Pro" and "Copyright (c) 2026". Change them to neutral
+   text before publishing. Also check the app name / icon you typed into
+   the GUI: names or artwork that imitate a commercial OS are a trademark
+   risk once the repo is public.
+
+4. Your web assets: confirm the 3 WAV files and the .ico are yours (or
+   properly licensed). Open-sourcing = publicly redistributing them.
+   If any came from somewhere else, replace or credit them.
+
+5. Electron notices (IMPORTANT): Electron is MIT, and MIT requires its
+   copyright + license text to be kept in redistributed binaries.
+   The Electron zip ships "LICENSE" and "LICENSES.chromium.html"
+   (Chromium + many third-party licenses) next to electron.exe.
+   Our packer copies the whole kernel folder, so those two files are
+   ALREADY inside your output folder. Just do not delete them.
+   If you publish the built app, keep them beside the exe and add a
+   short THIRD-PARTY-NOTICES crediting Electron / Chromium / Node.js.
+
+---- one honest caveat ----
+
+Electron 22 is end-of-life and receives no security fixes. If you publish,
+write in the README: "For offline legacy Windows 7 machines only. Do not
+use on internet-facing or production systems." That protects you and
+tells users what they are getting.
+
+---- about the generated code ----
+
+MiniPack.java was generated at your request with no third-party imports.
+Treat it as your own output, but avoid claiming "written entirely by me
+from scratch" if the platform terms matter to you; a plain MIT header
+with your name is enough and is what most people do.
+
+If family members contributed assets or code, confirm with them first.
+
+---- about "do not pass it off as your own" ----
+
+The floating notice window + NOTICE.txt say exactly that. One honest
+boundary: MIT is permissive, so it CANNOT forbid someone from copying or
+redistributing. What it DOES forbid is deleting your copyright notice and
+license text -- so "claiming they wrote it" is already a violation. The
+NOTICE file just spells that out loudly.
+
+If you truly want to forbid ALL redistribution by others, MIT is the wrong
+license: switch to a non-redistribution license, but then the repo is no
+longer standard open source. For a public Gitee/GitHub repo, keep MIT +
+NOTICE, that covers "don't pretend it's yours" as far as open source can.
+
+Files now in this package for publishing:
+  LICENSE            MIT text (edit the placeholder name)
+  NOTICE.txt         copyright + no-passing-off statement
+  .gitignore         keeps class/log/out/zip out of git
+  OPENSOURCE.txt     this checklist
+  README.txt         build steps + copyright note
+  START.bat          launcher (fixed, stays open on error)
+  MiniPack.java      source, with copyright header + floating notice window

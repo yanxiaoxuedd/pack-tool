@@ -1,0 +1,31 @@
+MiniPack - Copyright Notice
+===========================
+
+Copyright (c) 2026 <YOUR NAME OR GITHUB ID>
+
+This software is distributed under the MIT License (see LICENSE).
+The author owns the copyright. A floating notice window with the same
+statement is shown every time the builder GUI starts.
+
+DO NOT PASS THIS SOFTWARE OFF AS YOUR OWN.
+You may use, copy, modify and redistribute it, but every copy or
+substantial portion MUST keep:
+
+  * this NOTICE.txt
+  * the LICENSE file (full MIT text)
+  * the copyright header in MiniPack.java
+  * the in-app copyright window text
+
+Removing the author's name, deleting these notices, or claiming you
+wrote this tool from scratch is NOT permitted. Attribution must travel
+with the software.
+
+Note on MIT: a permissive license cannot forbid redistribution itself.
+What it DOES forbid is dropping the copyright + license notice. This
+NOTICE makes that obligation explicit. If you need to forbid all
+redistribution, switch to a different license -- but then the project
+is no longer standard open source.
+
+Third-party: the BUILD OUTPUT (not this source) embeds Electron 22,
+Chromium and Node.js. Keep LICENSE and LICENSES.chromium.html from the
+Electron zip next to the built exe. See OPENSOURCE.txt.
